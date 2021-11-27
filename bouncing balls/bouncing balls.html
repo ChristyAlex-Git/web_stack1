@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Page Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+   <style>
+       @-webkit-keyframes
+       jump{
+           0%{transform:translateY(0pz);}
+           50%{transform: translateY(70px);}
+           100%{transform: translateY(0px);}
+
+       }
+       svg{
+           border: 1px solid black;
+           background-color:black;
+           padding: 12px 12px;
+           align-content: center;
+           margin: 10px;    
+           align-content:center;
+       }
+       #circle1{
+        animation: jump 6s ease-in infinite;
+        animation-delay: 1s;
+       }
+       #circle2{
+        animation: jump 6s ease-in infinite;
+        animation-delay: 2s;
+       }
+       #circle3{
+        animation: jump 6s ease-in infinite;
+        animation-delay: 3s;
+       }
+       #circle4{
+        animation: jump 6s ease-in infinite;
+        animation-delay: 4s;
+       }
+       #circle5{
+        animation: jump 6s ease-in infinite;
+        animation-delay: 5s;
+       }
+       #circle6{
+        animation: jump 6s ease-in infinite;
+        animation-delay: 6s;
+       }
+   
+   
+   
+   </style>
+    <script src="bouncing.js"></script>
+</head>
+<body>
+    
+    <svg width="300px" height="300px" id="circle">
+        <circle id="circle1" cx="80" cy="80" r="5" fill="green">
+        </circle>
+        <circle id="circle2" cx="95" cy="80" r="5" fill="blue">
+            </circle>
+            <circle id="circle3" cx="110" cy="80" r="5" fill="red">
+                </circle>
+                <circle id="circle4" cx="125" cy="80" r="5" fill="yellow">
+                    </circle>
+                    <circle id="circle5" cx="140" cy="80" r="5" fill="white">
+                        </circle>
+                        <circle id="circle6" cx="155" cy="80" r="5" fill="pink">
+                            </circle>
+    </svg>
+    <div class=button>
+        <button id="play">Playit</button>
+    </div>
+    <audio id="stopwatchSound" src="KY3RAVB-game-ball-bounce.mp3" preload="auto">
+        Your browser does not support the <code>audio</code> element.
+      </audio>
+    
+</body>
+</html>
