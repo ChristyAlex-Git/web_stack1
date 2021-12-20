@@ -9,6 +9,8 @@ Prima facie -The Responsible consultancy
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="description" content="">
 <meta name="author" content="">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <title>Prima facie -Affordable law to all</title>
 <!--Bootstrap-->
 <link rel="stylesheet" type="text/css" href="css/bootstrap.css">
@@ -49,20 +51,68 @@ Prima facie -The Responsible consultancy
           <a class="navbar-brand" href="#menu">
           <img src="images/Logo/01.png" id="png_logo" alt=""></a> </div>
         <!-- Collect the nav links, forms, and other content for toggling -->
-        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+        <!--
+          <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
           <ul class="nav navbar-nav">
             <li class="active"><a class="scroll" href="#menu">Home</a></li>
             <li><a class="scroll" href="#about">About</a></li>
-            <li><a class="scroll" href="#Law service">Law Service</a></li><!--Service-->
-            <li><a class="scroll" href="#Forum">Forum</a></li><!--Features-->
-            <li><a class="scroll" href="#E-learnings">E-learnings</a></li><!--Portfolio-->
-            <li><a class="scroll" href="#citations">Citations</a></li><!--Pricing-->
-            <li><a class="scroll" href="#team">Our Team</a></li><!--Team-->
-            <li><a class="scroll" href="#blog">Blog</a></li><!---->
+                <li><a href="#"><i class="fa fa-caret-down"></i>Dropdown</a></li>
+                <div class="sub-menu-1">
+                  <ul>
+                    <li><a href="#">Link 1</a></li>
+                      <li><a href="#">Link 2</a></li>
+                        <li><a href="#">Link 3</a></li>
+                </ul>
+                </div> 
+            <li><a class="scroll" href="#Law service">Law Service</a></li>
+            <li><a class="scroll" href="#Forum">Forum</a></li>
+            <li><a class="scroll" href="#E-learnings">E-learnings</a></li>
+            <li><a class="scroll" href="#team">Our Team</a></li>
+            <li><a class="scroll" href="#blog">Blog</a></li>
             <li><a class="scroll" href="#contact">Contact Us</a></li>
+            <li><a class="scroll" href="#citations">Citations</a></li>
+
+            
           </ul>
+        </div>-->
+        <div id="container">
+          <nav>
+              <ul>
+                  <li class="active"><a class="scroll" href="#menu">Home</a></li>
+                  <li><a  class="scroll" href="#about">About</a>
+       
+                  <li ><a class="scroll" href="#Law service">Law Service</a>
+                  
+                      <ul>
+      
+                          <li><a class="scroll" href="#Forum">Forum</a></li>
+                          <li><a class="scroll" href="#E-learnings">E-learnings</a></li>
+                          <li><a class="scroll" href="#find_lawer">Find a lawyer</a></li>
+    
+                          
+                          
+                              <!--Second Tier Drop Down
+                              <ul>
+                                  <li><a href="">HTML/CSS</a></li>
+                                  <li><a href="">JQuery</a></li>
+                                  <li><a href="">Outher</a>
+                                  </li>
+                              </ul>-->
+                              <!--3rd tire drop down-->>
+                          
+                          </li>
+                      </ul>
+                  
+                  </li>
+                  <li><a class="scroll" href="#team">Our Team</a></li>
+                  <li><a class="scroll" href="#blog">Blog</a></li>
+                  <li><a class="scroll" href="#contact">Contact Us</a></li>
+                  <li><a class="scroll" href="#citations">Citations</a></li>
+              </ul>
+          </nav>
         </div>
-        <!-- /.navbar-collapse -->
+          
+      </div>
       </div>
       <!-- /.container-fluid -->
     </div>
@@ -245,7 +295,7 @@ Prima facie -The Responsible consultancy
     </div>
   </div>
 </section>-->
-<!--Features-Section-Start
+<!--
 <section id="features">
   <div class="container">
     <div class="col-md-8 col-md-offset-2">
@@ -322,29 +372,52 @@ Prima facie -The Responsible consultancy
     </div>
   </div>
 </section>-->
-<!--Portfolio-Section-Start
+<section id="find_lawer"> 
+  <div class="find_lawyer">
+    <p>Enter your preferred location</p>
+    <input type="text"/>
+    <p>Choose the case type:</p>
+    <label for="cars">choose a case type:</label>
+
+  <select name="case type" id="case type">
+  <option value="criminal">criminal</option>
+  <option value="Corporate">Corporate</option>
+  <option value="Civil">Civil</option>
+  <option value="International">International</option>
+  </select>
+  <button type="submit">submit</button>
+  <div class="wrap">
+    <div class="search">
+       <input type="text" class="searchTerm" placeholder="search a lawyer by name">
+       <button type="submit" class="searchButton">
+         <i class="fa fa-search"></i>
+      </button>
+    </div>
+ </div>
+    
+  </div>
+</section>
 <section id="portfolio">
   <div class="container">
     <div class="col-md-8 col-md-offset-2">
       <div class="heading">
-        <h2>AWESOME FEATUR<span>ES</span></h2>
+        <h2><span></span></h2>
         <div class="line"></div>
-        <p><span><strong>L</strong></span>orem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut 
-          et dolore magna aliqua. Ut enim ad minim veniam</p>
+        <p><span><strong>I</strong></span>mage Gallery</p>
       </div>
     </div>
     <div class="text-center">
       <ul class="portfolio-filter">
         <li><a class="active" href="#" data-filter="*">All Works</a></li>
-        <li><a href="#" data-filter=".creative">Creative</a></li>
+        <li><a href="#" data-filter=".creative">Civil</a></li>
         <li><a href="#" data-filter=".corporate">Corporate</a></li>
-        <li><a href="#" data-filter=".portfolio">Portfolio</a></li>
+        <li><a href="#" data-filter=".portfolio">criminal</a></li>
       </ul>
     </div>
     <div class="portfolio-items">
       <div class="col-md-4 col-sm-6 col-xs-12 portfolio-item creative">
         <div class="portfolio-item-inner"> <img class="img-responsive" src="images/Portfolio/01.jpg" alt="">
-          <div class="portfolio-info"> <a class="preview" href="images/Portfolio/01.jpg" data-rel="prettyPhoto"><i class="fa fa-plus-circle"></i></a>
+          <div class="portfolio-info"> <a class="preview" href="images/Portfolio/01.jfif" data-rel="prettyPhoto"><i class="fa fa-plus-circle"></i></a>
             <h6>ITEM-1</h6>
             <p>Lorem Ipsum</p>
           </div>
@@ -353,7 +426,7 @@ Prima facie -The Responsible consultancy
 
       <div class="col-md-4 col-sm-6 col-xs-12 portfolio-item corporate portfolio">
         <div class="portfolio-item-inner"> <img class="img-responsive" src="images/Portfolio/02.jpg" alt="">
-          <div class="portfolio-info"> <a class="preview" href="images/Portfolio/02.jpg" data-rel="prettyPhoto"><i class="fa fa-plus-circle"></i></a>
+          <div class="portfolio-info"> <a class="preview" href="images/Portfolio/02.jfif" data-rel="prettyPhoto"><i class="fa fa-plus-circle"></i></a>
             <h6>ITEM-2</h6>
             <p>Lorem Ipsum</p>
           </div>
@@ -361,7 +434,7 @@ Prima facie -The Responsible consultancy
       </div>
       <div class="col-md-4 col-sm-6 col-xs-12 portfolio-item creative">
         <div class="portfolio-item-inner"> <img class="img-responsive" src="images/Portfolio/03.jpg" alt="">
-          <div class="portfolio-info"> <a class="preview" href="images/Portfolio/03.jpg" data-rel="prettyPhoto"><i class="fa fa-plus-circle"></i></a>
+          <div class="portfolio-info"> <a class="preview" href="images/Portfolio/03.jfif" data-rel="prettyPhoto"><i class="fa fa-plus-circle"></i></a>
             <h6>ITEM-3</h6>
             <p>Lorem Ipsum</p>
           </div>
@@ -369,7 +442,7 @@ Prima facie -The Responsible consultancy
       </div>
       <div class="col-md-4 col-sm-6 col-xs-12 portfolio-item corporate">
         <div class="portfolio-item-inner"> <img class="img-responsive" src="images/Portfolio/04.jpg" alt="">
-          <div class="portfolio-info"> <a class="preview" href="images/Portfolio/04.jpg" data-rel="prettyPhoto"><i class="fa fa-plus-circle"></i></a>
+          <div class="portfolio-info"> <a class="preview" href="images/Portfolio/04.jfif" data-rel="prettyPhoto"><i class="fa fa-plus-circle"></i></a>
             <h6>ITEM-4</h6>
             <p>Lorem Ipsum</p>
           </div>
@@ -377,7 +450,7 @@ Prima facie -The Responsible consultancy
       </div>
       <div class="col-md-4 col-sm-6 col-xs-12 portfolio-item creative portfolio">
         <div class="portfolio-item-inner"> <img class="img-responsive" src="images/Portfolio/05.jpg" alt="">
-          <div class="portfolio-info"> <a class="preview" href="images/Portfolio/05.jpg" data-rel="prettyPhoto"><i class="fa fa-plus-circle"></i></a>
+          <div class="portfolio-info"> <a class="preview" href="images/Portfolio/05.jfif" data-rel="prettyPhoto"><i class="fa fa-plus-circle"></i></a>
             <h6>ITEM-5</h6>
             <p>Lorem Ipsum</p>
           </div>
@@ -385,7 +458,7 @@ Prima facie -The Responsible consultancy
       </div>
       <div class="col-md-4 col-sm-6 col-xs-12 portfolio-item corporate">
         <div class="portfolio-item-inner"> <img class="img-responsive" src="images/Portfolio/06.jpg" alt="">
-          <div class="portfolio-info"> <a class="preview" href="images/Portfolio/06.jpg" data-rel="prettyPhoto"><i class="fa fa-plus-circle"></i></a>
+          <div class="portfolio-info"> <a class="preview" href="images/Portfolio/06.jfif" data-rel="prettyPhoto"><i class="fa fa-plus-circle"></i></a>
             <h6>ITEM-6</h6>
             <p>Lorem Ipsum</p>
           </div>
@@ -393,10 +466,13 @@ Prima facie -The Responsible consultancy
       </div>
     </div>
   </div>
-</section>-->
-<table border="5px" style="width: 100%;border-color: rebeccapurple;align-content: center;text-align: center;border-width: 5px;border-style:solid ;">
+</section>
+<div id="table_header">
+  <p ><h3><u><b>O</b>ur famous consultancts</u></h3></p>
+</div>
+<table>
 <tr>
-    <th>Name</th>
+    <th style="">Name</th>
     <th>reg_id</th>
     <th>Specilization</th>
     <th>Phone number</th>

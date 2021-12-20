@@ -3,7 +3,60 @@
 	templatestock.co @templatestock
 	Released for free under the Creative Commons Attribution 3.0 license (templated.co/license)
 */
+nav{
+    background: rgba( 255,255,255, 0.2);
+	box-shadow: 0 5px 15px rgba( 0, 0, 0, 0.25);
+	
+}
+nav ul {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    position: relative;
+}
+nav ul li{
+    display: inline-block;
+    background-color:rgba( 0,0,0,.03);
+}
+nav a{
+    display: block;
+    padding: 0 15px;
+    color: #fff;
+    line-height: 60px;
+    font-size: 20px;
+    text-decoration: none;
+}
+nav ul ul {
+    display: none;
+    position: absolute;
+    top: 60px;
+}
 
+/* hover */
+nav a:hover{
+    background-color: #ffffff;
+    color: red;
+	opacity:1;
+}
+/* Display Dropdown on Hover */
+nav ul li:hover > ul {
+    display: inherit;
+}
+/* Fisrt Tier Dropdown */
+nav ul ul li{
+    display: list-item;
+    position: relative;
+    width: 170px;
+    float: none;
+    
+}
+/* ============ Second, Third and More Tiers ===========*/
+nav ul ul ul li {
+    position: relative;
+    top: -60px;
+    left: 170px;
+}
+/*above are code just copied from w3*/
 * {
 	margin:0 auto;
 }
@@ -11,6 +64,93 @@
 {
 	width: 300px;
 	height:170px; 
+}
+#table_header
+{
+	padding: left 10px;;
+	color:darkmagenta;
+	text-transform: uppercase;
+	width: auto;
+	text-align: center;
+	padding-right: 100px;
+	font-style: normal;
+	text-decoration: underline red;
+	font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+
+}
+
+table,tr,td,th{
+	width:fit-content;
+	height:50px;
+	border-color: rebeccapurple;
+	align-content: right;
+	text-align: center;
+	border-width: 2px;
+	border-style:solid ;
+}
+table
+{
+	position: sticky;
+	right: 20px;
+	width: 50%;
+	padding: right 700px;;
+}
+@import url(https://fonts.googleapis.com/css?family=Open+Sans);
+
+body{
+  background: #f2f2f2;
+  font-family: 'Open Sans', sans-serif;
+}
+
+.search {
+  width: 100%;
+  position: relative;
+  display: flex;
+}
+
+.searchTerm {
+  width: 100%;
+  border: 3px solid #00B4CC;
+  border-right: none;
+  padding: 5px;
+  height: 20px;
+  border-radius: 5px 0 0 5px;
+  outline: none;
+  color: #9DBFAF;
+}
+
+.searchTerm:focus{
+  color: #00B4CC;
+}
+
+.searchButton {
+  width: 40px;
+  height: 36px;
+  border: 1px solid #00B4CC;
+  background: #00B4CC;
+  text-align: center;
+  color: #fff;
+  border-radius: 0 5px 5px 0;
+  cursor: pointer;
+  font-size: 20px;
+}
+.find_lawer
+{
+	align-content: center;
+	padding: inherit;
+	width: 40%;
+}
+
+
+/*Resize the wrap to see the search bar change!*/
+.wrap{
+  width: 30%;
+  position:static;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding-left: 0px;
+  align-self:inherit;
 }
 @font-face {
  font-family: 'helvetica_ce_55_romanregular';
