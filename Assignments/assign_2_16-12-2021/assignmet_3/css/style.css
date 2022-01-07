@@ -83,6 +83,10 @@ nav ul ul ul li {
 	width: 300px;
 	height:170px; 
 }
+#my_audio
+{
+	display: none;
+}
 #table_header
 {
 	padding: left 10px;;
@@ -116,8 +120,7 @@ table
 @import url(https://fonts.googleapis.com/css?family=Open+Sans);
 
 body{
-	background: url(bg_2.png) no-repeat center;
-	background-size: cover;
+	
   font-family: 'Open Sans', sans-serif;
 }
 .find_lawyer
@@ -164,9 +167,37 @@ body{
   cursor: pointer;
   font-size: 20px;
 }
+.video_promo
+{
+	border: #000 2px solid;
+	width: 70%;
+	padding: left 20px;
+	position:static;
+	box-sizing:content-box;
+	align-content: inherit;
+	display:flex;
+	align-content:left;
+
+}
+.video_promo video
+{
+	width: 100%;
+	auto
+}
 #find_lawer
 {
 	background: url(Assignments\assign_2_16-12-2021\bg_1.png) left top no-repeat;
+	background: url(bg_2.png) no-repeat center;
+	background-size: cover;
+	background-image: url(firefox.png),
+      url(bubbles.png),
+      linear-gradient(to right, rgb(28, 67, 102,.5), rgba(255, 255, 255, 0));
+  background-repeat: no-repeat,
+      no-repeat,
+      repeat;
+  background-position: bottom right,
+      left,
+      right;
 }
 .find_lawer
 {
