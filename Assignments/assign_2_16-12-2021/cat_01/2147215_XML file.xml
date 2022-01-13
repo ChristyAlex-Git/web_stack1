@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="xsl_2.xsl"?>
+<Company xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"  xsi:noNamespaceSchemaLocation="xsd file.xsd">
+  <Employee Employee_id="emp01">
+    <Emp-name>Rithikesh</Emp-name>
+    <Emp-age>30</Emp-age>
+    <Emp-salary>20000</Emp-salary>
+    <Emp-emailid>rithik@gmail.com</Emp-emailid>
+    <Emp-Phonenum>8645759920</Emp-Phonenum>
+    <Emp-designation>Test lead</Emp-designation>
+  </Employee>
+  <Employee Employee_id="emp02">
+    <Emp-name>Raeksh</Emp-name>
+    <Emp-age>52</Emp-age>
+    <Emp-salary>15000</Emp-salary>
+    <Emp-emailid>rakeshtb@gmail.com</Emp-emailid>
+    <Emp-Phonenum>7845123696</Emp-Phonenum>
+    <Emp-designation>Test lead</Emp-designation>
+  </Employee>
+  <Employee Employee_id="emp03">
+    <Emp-name>ramesh</Emp-name>
+    <Emp-age>27</Emp-age>
+    <Emp-salary>20000</Emp-salary>
+    <Emp-emailid>rajeshvarma78@gmail.com</Emp-emailid>
+    <Emp-Phonenum>8645759920</Emp-Phonenum>
+    <Emp-designation>Test lead</Emp-designation>
+  </Employee>
+  <Employee Employee_id="emp04">
+    <Emp-name>Gokul</Emp-name>
+    <Emp-age>46</Emp-age>
+    <Emp-salary>40000</Emp-salary>
+    <Emp-emailid>gokuldas23@gmail.com</Emp-emailid>
+    <Emp-Phonenum>8645759920</Emp-Phonenum>
+    <Emp-designation>Test lead</Emp-designation>
+  </Employee>
+</Company>
