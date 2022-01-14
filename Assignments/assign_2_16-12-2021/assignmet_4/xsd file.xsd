@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<law:schema xmlns:law="http://www.w3.org/2001/XMLSchema">
+<law:element name="PrimaFaciae">
+<law:complexType>
+<law:sequence>
+<law:element name="Consultants" maxOccurs="unbounded">
+<law:complexType>
+<law:sequence>
+<law:element name="Name" type="law:string" use="required"></law:element>
+<law:element name="Register_id" type="law:string" use="required"></law:element>
+<law:element name="Specialization" type="spec"></law:element>
+<law:element name="Phone" type="numb"></law:element>
+</law:sequence>
+</law:complexType>
+</law:element>
+</law:sequence>
+</law:complexType>
+</law:element>
+<!--applying restrictions-1-->
+<law:simpleType name="spec">
+<law:restriction base="law:string">
+<law:enumeration value="Civil"></law:enumeration>
+<law:enumeration value="Criminal"></law:enumeration>
+<law:enumeration value="Corporate"></law:enumeration>
+</law:restriction>
+</law:simpleType>
+<!--end of restriction-1-->
+<!--applying restriction-2-->
+<law:simpleType name="numb">
+    <law:restriction base="law:string">
+      <law:length value="10"/>
+    </law:restriction>
+  </law:simpleType>
+</law:schema>

@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="XSL file.xsl"?>
+<PrimaFaciae xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="xsd file.xsd">
+  <Consultants>
+    <Name>Rajesh</Name>
+    <Register_id>2223wer</Register_id>
+    <Specilization>Criminal</Specilization>
+	<Phone>9878536200</Phone>
+  </Consultants>
+  <Consultants>
+    <Name>Rithikesh acharya</Name>
+    <Register_id>3425tyq</Register_id>
+    <Specilization>Ciil</Specilization>
+	<Phone>3454453533</Phone>
+  </Consultants>
+<Consultants>
+    <Name>Ramavarshi</Name>
+    <Register_id>wuy453</Register_id>
+    <Specilization>Corporate</Specilization>
+	<Phone>3454453533</Phone>
+  </Consultants>
+<Consultants>
+    <Name>Gokul garwal</Name>
+    <Register_id>123io5</Register_id>
+    <Specilization>Civil</Specilization>
+	<Phone>3454453533</Phone>
+  </Consultants>
+<Consultants>
+    <Name>Shankar mahesh</Name>
+    <Register_id>8933ow6u</Register_id>
+    <Specilization>Criminal</Specilization>
+	<Phone>3454453533</Phone>
+  </Consultants>
+<Consultants>
+    <Name>Pratham varma</Name>
+    <Register_id>763w09</Register_id>
+    <Specilization>Civil</Specilization>
+	<Phone>3454453533</Phone>
+  </Consultants>
+<Consultants>
+    <Name>Gowtham golker </Name>
+    <Register_id>2390tye98</Register_id>
+    <Specilization>Civil</Specilization>
+	<Phone>3454453533</Phone>
+  </Consultants>
+  <Consultants>
+    <Name>Kishor nanda</Name>
+    <Register_id>157l0tye8</Register_id>
+    <Specilization>Corporate</Specilization>
+	<Phone>8657152325</Phone>
+  </Consultants>
+</PrimaFaciae>

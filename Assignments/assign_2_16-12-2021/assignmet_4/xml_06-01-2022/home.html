@@ -1,0 +1,77 @@
+<html>
+<head>
+<style>
+table, th, td {
+  border: 5px solid navy;
+  border-collapse:collapse;
+}
+th, td {
+  padding: 5px;
+}
+</style>
+</head>
+<body>
+
+<button type="button" onclick="loadXMLDoc()">Get my CD collection</button>
+<br><br>
+<table id="demo" style="border:5px red solid"></table>
+
+<script>
+function loadXMLDoc() {
+  var xmlhttp = new XMLHttpRequest();
+  xmlhttp.onreadystatechange = function() {
+    if (this.readyState == 4 && this.status == 200) {
+      myFunction(this);
+    }
+  };
+  xmlhttp.open("GET", "Xml_06-01-2022.xml", true);
+  xmlhttp.send();
+}
+function myFunction(xml) {
+  var i;
+  var xmlDoc = xml.responseXML;
+  var table="<tr><th>Name</th><th>Register_id</th><th>Specilization</th><th>Phone</th></tr>";
+  var x = xmlDoc.getElementsByTagName("Consultants");
+  for (i = 0; i <x.length; i++) {
+    table += "<tr><td>" +
+    x[i].getElementsByTagName("Name")[0].childNodes[0].nodeValue +
+    "</td><td>" +
+    x[i].getElementsByTagName("Register_id")[0].childNodes[0].nodeValue +
+    "</td><td>"+
+    x[i].getElementsByTagName("Specilization")[0].childNodes[0].nodeValue +
+    "</td><td>"+
+    x[i].getElementsByTagName("Phone")[0].childNodes[0].nodeValue +
+    "</td></tr>";
+  }
+  document.getElementById("demo").innerHTML = table;
+}
+</script>
+<script>
+    if (window.XMLHttpRequest)
+    {// code for IE7+, Firefox, Chrome, Opera, Safari
+    xmlhttp=new XMLHttpRequest();
+    }
+    else
+    {// code for IE6, IE5
+    xmlhttp=new ActiveXObject("Microsoft.XMLHTTP");
+    }
+    xmlhttp.open("GET","Xml_06-01-2022.xml",false);
+    xmlhttp.send();
+    xmlDoc=xmlhttp.responseXML;
+    
+    document.write("<table border='1'>");
+    var x=xmlDoc.getElementsByTagName("Consultants");
+    for (i=0;i<x.length;i++)
+    {
+    document.write("<tr><td>");
+    document.write(x[i].getElementsByTagName("Name")[0].childNodes[0].nodeValue);
+    document.write("</td><td>");
+    document.write(x[i].getElementsByTagName("Register_id")[0].childNodes[0].nodeValue);
+    document.write("</td></tr>");
+    }
+    document.write("</table>");
+    </script>
+    
+
+</body>
+</html>
