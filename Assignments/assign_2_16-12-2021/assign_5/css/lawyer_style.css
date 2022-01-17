@@ -1,0 +1,96 @@
+body
+{
+    background-image: url(firefox.png),
+      url(bubbles.png),
+      linear-gradient(to right, rgb(28, 67, 102,.5), rgba(255, 255, 255, 0));
+  background-repeat: no-repeat,
+      no-repeat,
+      repeat;
+  background-position: bottom right,
+      left,
+      right;
+}
+nav{
+    background: rgba(12, 4, 4, 0.2);
+	box-shadow: 0 5px 15px rgba( 0, 0, 0, 0.25);
+	
+}
+a:visited
+{
+	color: red;
+
+}
+a{
+	color: white;
+	text-decoration: underline;
+}
+
+nav ul {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    position: relative;
+}
+nav ul li{
+    display: inline-block;
+    background-color:rgba( 0,0,0,.03);
+}
+nav a{
+    display: block;
+    padding: 0 15px;
+    color: #fff;
+    line-height: 60px;
+    font-size: 20px;
+    text-decoration: none;
+}
+nav ul ul {
+    display: none;
+    position: absolute;
+    top: 60px;
+}
+#i_frame
+{
+    width: 20%;
+    height: 100%;
+    float: right;
+
+}
+
+/* hover */
+nav a:hover{
+    background-color: #ffffff;
+    color: red;
+	opacity:1;
+}
+/* Display Dropdown on Hover */
+nav ul li:hover > ul {
+    display: inherit;
+}
+/* Fisrt Tier Dropdown */
+nav ul ul li{
+    display: list-item;
+    position: relative;
+    width: 170px;
+    float: none;
+    
+}
+/* ============ Second, Third and More Tiers ===========*/
+nav ul ul ul li {
+    position: relative;
+    top: -60px;
+    left: 170px;
+}
+/*above are code just copied from w3*/
+* {
+	margin:0 auto;
+	
+}
+.form_finding_lawyer
+{
+    float: left;
+    width: auto;
+    position: relative;
+    padding-top:6%;
+    padding-right: 20%;
+    
+}

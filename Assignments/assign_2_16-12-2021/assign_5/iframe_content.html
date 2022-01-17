@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<script>
+function loadXMLDoc() {
+  var xmlhttp = new XMLHttpRequest();
+  xmlhttp.onreadystatechange = function() {
+    if (this.readyState == 4 && this.status == 200) {
+      alert("let's go! table loaded");
+      myFunction(this);
+    }
+  };
+  xmlhttp.open("GET", "Xml_06-01-2022.xml", true);
+  xmlhttp.send();
+}
+function myFunction(xml) {
+  var i;
+  var xmlDoc = xml.responseXML;
+  var table="<tr><th>Name</th><th>Register_id</th><th>Specilization</th><th>Phone</th></tr>";
+  var x = xmlDoc.getElementsByTagName("Consultants");
+  for (i = 0; i <x.length; i++) {
+    table += "<tr><td>" +
+    x[i].getElementsByTagName("Name")[0].childNodes[0].nodeValue +
+    "</td><td>" +
+    x[i].getElementsByTagName("Register_id")[0].childNodes[0].nodeValue +
+    "</td><td>"+
+    x[i].getElementsByTagName("Specilization")[0].childNodes[0].nodeValue +
+    "</td><td>"+
+    x[i].getElementsByTagName("Phone")[0].childNodes[0].nodeValue +
+    "</td></tr>";
+  }
+  var value=document.getElementById("frame_links").getElementsByTagName("li").childNodes[1].innerHTML;
+  alert(value);
+  document.getElementById("demo1").innerHTML = table;
+  let menu = document.getElementById('frame_links');
+        // create a new li node
+        let li = document.createElement('li');
+        li.textContent = 'payment';
+        insertAfter(li,  menu.lastElementChild);
+}
+</script>
+<body>
+    <div id="frame_links">
+    <ol>
+        <li><button onclick="loadXMLDoc()">see lawyer table</button></li>
+        <li><a href="find_lawyer.html" target="_blank">see the major client</a></li>
+    </ol>
+</div> 
+</body>
+</html>
