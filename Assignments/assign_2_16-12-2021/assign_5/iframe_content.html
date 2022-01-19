@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,49 +8,84 @@
     <title>Document</title>
 </head>
 <script>
-function loadXMLDoc() {
-  var xmlhttp = new XMLHttpRequest();
-  xmlhttp.onreadystatechange = function() {
-    if (this.readyState == 4 && this.status == 200) {
-      alert("let's go! table loaded");
-      myFunction(this);
+    function loadXMLDoc() {
+        var xmlhttp = new XMLHttpRequest();
+        xmlhttp.onreadystatechange = function() {
+            if (this.readyState == 4 && this.status == 200) {
+                alert("let's go! table loaded");
+                myFunction(this);
+            }
+        };
+        xmlhttp.open("GET", "Xml_06-01-2022.xml", true);
+        xmlhttp.send();
     }
-  };
-  xmlhttp.open("GET", "Xml_06-01-2022.xml", true);
-  xmlhttp.send();
-}
-function myFunction(xml) {
-  var i;
-  var xmlDoc = xml.responseXML;
-  var table="<tr><th>Name</th><th>Register_id</th><th>Specilization</th><th>Phone</th></tr>";
-  var x = xmlDoc.getElementsByTagName("Consultants");
-  for (i = 0; i <x.length; i++) {
-    table += "<tr><td>" +
-    x[i].getElementsByTagName("Name")[0].childNodes[0].nodeValue +
-    "</td><td>" +
-    x[i].getElementsByTagName("Register_id")[0].childNodes[0].nodeValue +
-    "</td><td>"+
-    x[i].getElementsByTagName("Specilization")[0].childNodes[0].nodeValue +
-    "</td><td>"+
-    x[i].getElementsByTagName("Phone")[0].childNodes[0].nodeValue +
-    "</td></tr>";
-  }
-  var value=document.getElementById("frame_links").getElementsByTagName("li").childNodes[1].innerHTML;
-  alert(value);
-  document.getElementById("demo1").innerHTML = table;
-  let menu = document.getElementById('frame_links');
+
+    function myFunction(xml) {
+        var i;
+        var xmlDoc = xml.responseXML;
+        var table = "<tr><th>Name</th><th>Register_id</th><th>Specilization</th><th>Phone</th></tr>";
+        var x = xmlDoc.getElementsByTagName("Consultants");
+        for (i = 0; i < x.length; i++) {
+            table += "<tr><td>" +
+                x[i].getElementsByTagName("Name")[0].childNodes[0].nodeValue +
+                "</td><td>" +
+                x[i].getElementsByTagName("Register_id")[0].childNodes[0].nodeValue +
+                "</td><td>" +
+                x[i].getElementsByTagName("Specilization")[0].childNodes[0].nodeValue +
+                "</td><td>" +
+                x[i].getElementsByTagName("Phone")[0].childNodes[0].nodeValue +
+                "</td></tr>";
+        }
+        var value = document.getElementById("ordered_list").getElementsByTagName("li").childNodes[1].innerHTML;
+        alert(value);
+        document.getElementById("demo1").innerHTML = table;
+        let menu = document.getElementById('ordered_list');
         // create a new li node
         let li = document.createElement('li');
         li.textContent = 'payment';
-        insertAfter(li,  menu.lastElementChild);
-}
+        insertAfter(li, menu.lastElementChild);
+        window.onload
+
+        function Delete() {
+            alert("OPeration done");
+            document.getElementsByClassName('frame_links')[0].remove();
+            document.getElementById('frame_links1')[0].remove();
+            y = xmlDoc.getElementsByTagName("ol")[0];
+            xmlDoc.documentElement.removeChild(y);
+        }
+
+        function delete_certain_node() {
+            var n = document.getElementById("frame_links").getElementsByTagName("ol")[0].childNodes[2];
+            console.log(n);
+            n.remove();
+        }
+
+        function Change_the_node_value() {
+            var a = document.getElementById('frame_links1').innerHTML = "See Whole Details of Layers";
+        }
+
+        function Add_a_new_element() {
+            const parentList = document.querySelector('ol');
+            const child = document.createElement('li');
+            child.textContent = 'Go to payment';
+            parentList.appendChild(child);
+
+        }
+
+    }
 </script>
+
 <body>
-    <div id="frame_links">
-    <ol>
-        <li><button onclick="loadXMLDoc()">see lawyer table</button></li>
-        <li><a href="find_lawyer.html" target="_blank">see the major client</a></li>
-    </ol>
-</div> 
+    <div class="frame_links">
+        <ol id="ordered_list">
+            <li id="frame_links1"><button onclick="Delete()">see lawyer table</button></li>
+            <li id="frame_links2"><a href="find_lawyer.html" target="_blank">see the major client</a></li>
+            <li id="frame_links3"><button onclick="Delete()">See Terms and services</button></li>
+            <li id="frame_links4"><button>Deleta a certain node</button></li>
+            <li id="frame_links5"><button onclick="Change_the_node_value()">Change options</button></li>
+            <li id="frame_links6"><button onclick="Add_a_new_element()"> See more options</button></li>
+        </ol>
+    </div>
 </body>
+
 </html>
